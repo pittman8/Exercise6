@@ -5,22 +5,51 @@
     <title>Planets!!</title>
 </head>
 
-<body>    
+<body>  
     <style>
-    
+        #main {
+            width: 500px;
+            height: 1000px;
+        }
     
     
     
     </style>
-    
-    
-    
+
+    <div id="main">
+        <div id = "planetString"></div>
+    </div>
     
     <script>
-    
-    
-    
-    
+        
+        let planets = document.getElementById("planetString");
+        planets.innerHTML = "Jupiter Venus Saturn Mars Krypton";
+        planets.setAttribute("style", "color: red; font-weight: bold;");
+        var planetsArray = planets.innerHTML.split(" "); // convert to array of strings
+        var earthDistance = [5.2, 0.72, 9.5, 1.5, 100.3];
+        var sunnyAugust = [false, true, false, true, true];
+        
+        
+        
+        // Displays planet names, distance from earth, and if it is sunny in August on the planet
+        for (var i = 0; i < planetsArray.length; i++)
+        {
+            document.getElementById("main").innerHTML += planetsArray[i] + "<br />"
+                                                        + earthDistance[i] + "<br />"
+                                                        + sunnyAugust[i] + "<br />"
+                                                        + "----------" + "<br />";
+        }
+        
+        document.getElementById("main").innerHTML += "These planets are sunny in August: <br />";
+        
+        // Displays the planets that are sunny in August
+        for (var i = 0; i <planetsArray.length; i++)
+        {
+            if(sunnyAugust[i]) 
+            {
+                document.getElementById("main").innerHTML += planetsArray[i] + "<br />";
+            }
+        }
     
     </script>
 </body>
