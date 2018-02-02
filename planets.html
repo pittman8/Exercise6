@@ -17,15 +17,35 @@
     </style>
 
     <div id="main">
-        <div id = "planetString"></div>
+        <div id = "planetString">Jupiter Venus Saturn Mars Krypton</div>
     </div>
     
     <script>
         
-        let planets = document.getElementById("planetString");
-        planets.innerHTML = "Jupiter Venus Saturn Mars Krypton";
-        planets.setAttribute("style", "color: red; font-weight: bold;");
-        var planetsArray = planets.innerHTML.split(" "); // convert to array of strings
+        document.getElementById("planetString").style.color = "blue";
+        document.getElementById("planetString").style.fontWeight = "bold";
+        var planets = document.getElementById("planetString").innerHTML.split(" ");
+        document.getElementById("planetString").innerHTML = planets;
+        
+        var planetsArray = document.getElementById("planetString").innerHTML;
+        
+        //var planets = ["Jupiter", "Venus", "Saturn", "Mars", "Krypton"]; // nothing in the "planetString" div initially
+        //var planets2 = [];   
+        
+//        for(var i = 0; i < planets.length; i++)
+//        {
+//            document.getElementById("planetString").innerHTML += planets[i];
+//            document.getElementById("planetString").style.color += "blue";
+//            document.getElementById("planetString").style.fontWeight += "bold";
+//            planets2.push(document.getElementById("planetString"));
+//        }
+//        
+        
+//        let planets = document.getElementById("planetString");
+//        planets.innerHTML = "Jupiter Venus Saturn Mars Krypton";
+//        planets.setAttribute("style", "color: red; font-weight: bold;");
+//        var planetsArray = planets.innerHTML.split(" "); // convert to array of strings
+        
         var earthDistance = [5.2, 0.72, 9.5, 1.5, 100.3];
         var sunnyAugust = [false, true, false, true, true];
         
